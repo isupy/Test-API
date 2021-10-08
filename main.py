@@ -14,7 +14,8 @@ data=[]
 
 @app.route('/')
 def hello():
-    return jsonify(data)
+    di = {"message":'Cities Lis',"data":data}
+    return jsonify(di)
 
 
 def getData():
@@ -23,8 +24,8 @@ def getData():
     # Read the data (text format) from response.
     global data
     data = response.json()
-    with open("./test.txt",'w') as f:
-        f.write(str(data))
+    # with open("./test.txt",'w') as f:
+    #     f.write(str(data))
 
 
 # Press the green button in the gutter to run the script.
