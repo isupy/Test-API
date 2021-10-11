@@ -14,7 +14,7 @@ data=[]
 
 @app.route('/')
 def hello():
-    di = {"message":'Main Cities List:::',"data":data}
+    di = {"message":'Main Cities List main',"data":data}
     return jsonify(di)
 
 
